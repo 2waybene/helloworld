@@ -1,14 +1,19 @@
 ##==================================================
 ##  Function for chi-square, logistic regression
 ##==================================================
-
+suppressWarnings(library(HardyWeinberg))
+options(java.parameters = "-Xmx1024m")
+suppressWarnings(library(XLConnect))
 AssoAnalysis <- function (sig.list, snpFiles, sheets, dt, column, row2use)
 {
-    dataIN <- loadWorkbook(snpFiles)
+    dataIN       <- loadWorkbook(snpFiles)
     sheets.names <-  getSheets(dataIN)  
     for (sheet2parse in sheets)
     {
       sheetIN  <- readWorksheet(dataIN, sheet=sheet2parse,   startRow = 7)
+    #  sheetIN  <- readWorksheet(dataIN, sheet=sheet2parse,   startRow = 7)      
+   
+      
       sig.chisq.case.I <- NULL
       sig.chisq.case.II <- NULL
       sig.chisq.case.III <- NULL
