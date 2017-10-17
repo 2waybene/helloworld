@@ -1,0 +1,48 @@
+---
+author:
+  - name: Jianying Li
+    affiliation: Kelly Government Solutions, Inc
+    address: >
+      111 T.W. Alexandra Drive
+      Reaserch Triangle Park, NC 27709
+    email: jianying.li@nih.gov
+    url: http://rstudio.com
+  - name: Yicheng Li
+    affiliation: University of North Carolina at Charlotte
+title:
+  formatted: "A Capitalized Title: Something about a Package \\pkg{foo}"
+  # If you use tex in the formatted title, also supply version without
+  plain:     "A Capitalized Title: Something about a Package foo"
+  # For running headers, if needed
+  short:     "\\pkg{foo}: A Capitalized Title"
+abstract: >
+  The abstract of the article.
+keywords:
+  # at least one keyword must be supplied
+  formatted: [keywords, not capitalized, "\\proglang{Java}"]
+  plain:     [keywords, not capitalized, Java]
+preamble: >
+  \usepackage{amsmath}
+output: rticles::jss_article
+---
+
+# Introduction
+
+This template demonstrates some of the basic latex you'll need to know to create a JSS article.
+
+## Code formatting
+
+Don't use markdown, instead use the more precise latex commands:
+
+* \proglang{Java}
+* \pkg{plyr}
+* \code{print("abc")}
+
+# R code
+
+Can be inserted in regular R markdown blocks.
+
+```{r}
+x <- 1:10
+x
+```

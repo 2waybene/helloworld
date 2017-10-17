@@ -1,4 +1,6 @@
-setwd("/Users/li11/myGit/helloworld/IB_group_meeting/RmdProj1")
+#setwd("/Users/li11/myGit/helloworld/IB_group_meeting/RmdProj1")
+
+setwd("x:/myGit/helloworld/IB_group_meeting/RmdProj1")
 suppressWarnings(require(pander))
 panderOptions('table.split.table', Inf)
 set.caption("Genotype case I")
@@ -52,7 +54,7 @@ row2use <- which (dt[,5] == 1)
 
 ##  This is for reading Excel file
 ##  We need to set memeory at 24 GB
-options(java.parameters = "-Xmx24g" )
+options(java.parameters = "-Xmx1024g" )
 
 snpFiles <- "data/ASCII_genotype_data_GoldenGate_for_JYL_07122015.xlsx"
 
