@@ -2,7 +2,7 @@
 ##  R_parallel_JYL.R
 ##  Credit goes to Henry Scharf
 ##==================================
-setwd("x:/learningR/learningParallel/")
+setwd("/Users/li11/myGit/helloworld/IB_group_meeting/learningParallel/")
 
 
 load(url("http://www.stat.colostate.edu/~scharfh/CSP_parallel/data/arrivals_subset.RData"))

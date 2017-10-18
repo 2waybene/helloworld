@@ -9,6 +9,8 @@ if( Sys.info()[['sysname']] == 'Windows' ){
   setwd("X:/project2017/evalParal/")
 }else if (Sys.info()[['sysname']] == 'Linux' ){
   setwd("/ddn/gs1/home/li11//project2017/evalParal/")
+}else if( Sys.info()[['sysname']] == 'Darwin' ){
+  setwd("/Users/li11/myGit/helloworld/IB_group_meeting/evalParal")
 }
 
 
@@ -51,7 +53,9 @@ proc.time() - ptm
 # user  system elapsed 
 # 30.915   0.150  38.128 
 
-
+##  Mac time
+# user  system elapsed 
+# 12.604   0.169  12.786 
 ##===============================================
 ##  Using for apply
 ##===============================================
@@ -109,7 +113,9 @@ myParse <- function(singleProbeSet, pools = probes) {
     cbind (singleProbeSet, length(probes_at), length(unique(probes_at)))
 }
 
+
 ptm <- proc.time()
+
 parse.result <- mclapply(trial, myParse, pools = probes, mc.cores = 80)
                         
 n <- foreach (i = 1: length(parse.result),
@@ -124,4 +130,6 @@ proc.time() - ptm
 #user  system elapsed 
 #29.294   5.902   3.202
 
-
+## Mac time
+# user  system elapsed 
+# 28.541  12.935   5.636 
